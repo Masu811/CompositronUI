@@ -1,0 +1,112 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  background-color: var(--editor-color);
+  color: var(--font-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --editor-color: #2f2f37;
+  --highlighted-editor-color: #60606a;
+  --menu-color: #2b2b30;
+  --highlighted-menu-color: #45454a;
+  --font-color: lightgray;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.row-container {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+}
+
+.plot-panel {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#menu-bar {
+  display: flex;
+  flex-direction: row;
+  height: min-content;
+  background-color: var(--menu-color);
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-bottom: 1px solid var(--highlighted-menu-color);
+  border-top: 1px solid var(--highlighted-menu-color);
+}
+
+.menu-bar-section {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  border-right: 1px solid var(--highlighted-menu-color);
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-bar table {
+  height: min-content;
+}
+
+#menu-bar td {
+  padding: 3px 10px;
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+
+#menu-bar td:hover {
+  background-color: var(--highlighted-menu-color);
+}
+
+.trace-selector {
+    overflow: scroll;
+    padding-right: 15px;
+    border-collapse: collapse;
+    height: min-content;
+}
+
+.trace-selector table {
+  border-collapse: collapse;
+  padding: 0;
+}
+
+.trace-selector tr {
+  height: min-content;
+}
+
+.trace-selector td {
+  padding: 3px 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  text-align: center;
+}
+
+.trace-selector td:hover {
+  background-color: #0f0f0f69;
+}
